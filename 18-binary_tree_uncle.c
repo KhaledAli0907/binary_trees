@@ -8,7 +8,7 @@
 
 binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 {
-	if (!node)
+	if (node == NULL || node->parent == NULL || node->parent->parent == NULL)
 		return (NULL);
 
 	/* know if node is left or right child to the parent */
@@ -17,4 +17,3 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node)
 
 	return (node->parent->parent->right);
 }
-
