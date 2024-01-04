@@ -2,7 +2,7 @@
 
 /**
  * is_bst - check if the tree is valid
- * 
+ *
  * @node: node to start
  * @min_val: minimum value
  * @max_val: maximum value
@@ -22,14 +22,15 @@ int is_bst(const binary_tree_t *node, int min_val, int max_val)
 }
 
 /**
- * binary_tree_is_bst - Check if a binary tree is a valid Binary Search Tree (BST)
+ * binary_tree_is_bst - Check if a binary tree is a valid\
+ * Binary Search Tree (BST)
  * @tree: Pointer to the root node of the tree to check
  * Return: 1 if tree is a valid BST, 0 otherwise
  */
 int binary_tree_is_bst(const binary_tree_t *tree)
 {
-    if (tree == NULL)
-        return 0; 
+	if (tree == NULL)
+		return (0);
 
-    return is_bst(tree, INT_MIN, INT_MAX);
+	return (is_bst(tree, INT_MIN, INT_MAX));
 }
