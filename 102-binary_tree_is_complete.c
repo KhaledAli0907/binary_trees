@@ -44,3 +44,4 @@ int binary_tree_is_complete(const binary_tree_t *tree)
 	free(queue);
 	return (is_complete);
 }
+
