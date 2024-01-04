@@ -1,3 +1,5 @@
+#include "binary_trees.h"
+
 bst_t *find_min_value_node(bst_t *node);
 bst_t *remove_node(bst_t *root, int value);
 
@@ -23,10 +25,10 @@ bst_t *remove_node(bst_t *root, int value)
 	if (root == NULL)
 		return (NULL);
 
-	if (value < root->value)
+	if (value < root->n)
 		root->left = remove_node(root->left, value);
 
-	else if (value > root->value)
+	else if (value > root->n)
 		root->right = remove_node(root->right, value);
 	else
 	{
@@ -47,9 +49,9 @@ bst_t *remove_node(bst_t *root, int value)
 
 		bst_t *temp = find_min_value_node(root->right);
 
-		root->value = temp->value;
+		root->n = temp->n;
 
-		root->right = remove_node(root->right, temp->value);
+		root->right = remove_node(root->right, temp->n);
 	}
 
 	return (root);
